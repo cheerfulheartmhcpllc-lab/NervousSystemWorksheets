@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Worksheet 4: Reclaiming Your Sense of Self | Cheerful Heart</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --teal: #2D9B8A;
+    --teal-light: #E0F4F1;
+    --teal-mid: #A8D9D2;
+    --plum: #6B3F72;
+    --plum-light: #EDE0F0;
+    --terra: #C4714C;
+    --terra-light: #F5E4DA;
+    --cream: #FAF6F0;
+    --warm-brown: #3D2B1F;
+    --mid-brown: #7A5C48;
+    --blush: #E8C5B0;
+    --gold: #C9973A;
+    --gold-light: #F5EDD8;
+    --sage: #6B8F6B;
+    --sage-light: #E4F0E4;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--cream);
+    color: var(--warm-brown);
+    line-height: 1.75;
+    font-size: 15px;
+  }
+
+  .page { max-width: 820px; margin: 0 auto; padding: 48px 40px; }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--gold);
+  }
+
+  .brand { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--teal); letter-spacing: 0.12em; text-transform: uppercase; line-height: 1.4; }
+
+  .series-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); background: var(--gold-light); padding: 4px 12px; border-radius: 20px; }
+
+  .accent-bar { display: flex; gap: 6px; margin-bottom: 32px; }
+  .accent-bar span { display: block; height: 5px; border-radius: 3px; }
+  .accent-bar .a1 { width: 30px; background: var(--teal); }
+  .accent-bar .a2 { width: 30px; background: var(--plum); }
+  .accent-bar .a3 { width: 50px; background: var(--gold); }
+
+  .title-block { margin-bottom: 32px; }
+  .worksheet-number { font-size: 11px; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--mid-brown); margin-bottom: 8px; }
+
+  h1 { font-family: 'Cormorant Garamond', serif; font-size: 42px; line-height: 1.15; color: var(--warm-brown); font-weight: 600; margin-bottom: 12px; }
+  h1 em { color: var(--gold); font-style: italic; }
+
+  .subtitle { font-size: 16px; color: var(--mid-brown); font-weight: 300; max-width: 560px; line-height: 1.6; }
+
+  .affirmation-box {
+    background: linear-gradient(135deg, var(--plum) 0%, #3D1F44 100%);
+    color: white;
+    border-radius: 16px;
+    padding: 24px 28px;
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+  }
+  .affirmation-box::before {
+    content: '\201C';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 120px;
+    color: rgba(255,255,255,0.1);
+    position: absolute;
+    top: -20px;
+    left: 10px;
+    line-height: 1;
+  }
+  .affirmation-box p { font-family: 'Cormorant Garamond', serif; font-size: 19px; line-height: 1.55; position: relative; z-index: 1; font-style: italic; }
+
+  .section { margin-bottom: 40px; }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: white;
+    background: var(--gold);
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+  .section-label.teal { background: var(--teal); }
+  .section-label.plum { background: var(--plum); }
+  .section-label.terra { background: var(--terra); }
+
+  h2 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 600; color: var(--warm-brown); margin-bottom: 14px; line-height: 1.25; }
+  h3 { font-family: 'Nunito', sans-serif; font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 8px; margin-top: 20px; text-transform: uppercase; letter-spacing: 0.05em; }
+  p { margin-bottom: 14px; }
+
+  .insight-box {
+    background: var(--gold-light);
+    border-left: 5px solid var(--gold);
+    border-radius: 0 12px 12px 0;
+    padding: 18px 22px;
+    margin: 20px 0;
+  }
+  .insight-box.teal { background: var(--teal-light); border-left-color: var(--teal); }
+  .insight-box.plum { background: var(--plum-light); border-left-color: var(--plum); }
+  .insight-box.terra { background: var(--terra-light); border-left-color: var(--terra); }
+  .insight-box.sage { background: var(--sage-light); border-left-color: var(--sage); }
+  .insight-box p { margin: 0; font-size: 14px; }
+  .insight-box strong { color: var(--gold); }
+  .insight-box.teal strong { color: var(--teal); }
+  .insight-box.plum strong { color: var(--plum); }
+  .insight-box.terra strong { color: var(--terra); }
+  .insight-box.sage strong { color: var(--sage); }
+
+  /* Shame vs guilt diagram */
+  .shame-guilt-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    margin: 20px 0;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 2px solid var(--blush);
+  }
+
+  .sg-header {
+    padding: 12px 20px;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    letter-spacing: 0.05em;
+  }
+
+  .sg-shame-header { background: var(--plum); color: white; }
+  .sg-guilt-header { background: var(--teal); color: white; }
+
+  .sg-item {
+    padding: 12px 20px;
+    font-size: 13px;
+    color: var(--mid-brown);
+    border-bottom: 1px solid var(--blush);
+    line-height: 1.5;
+  }
+
+  .sg-item.shame-item { background: var(--plum-light); }
+  .sg-item.guilt-item { background: var(--teal-light); }
+  .sg-item:last-of-type { border-bottom: none; }
+
+  /* Narrative reframe table */
+  .reframe-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 13px;
+  }
+
+  .reframe-table th {
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    font-size: 12px;
+    color: white;
+  }
+
+  .reframe-table th:first-child { background: var(--plum); border-radius: 8px 0 0 0; }
+  .reframe-table th:last-child { background: var(--teal); border-radius: 0 8px 0 0; }
+
+  .reframe-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--blush);
+    vertical-align: top;
+    min-height: 40px;
+  }
+
+  .reframe-table td:first-child { background: var(--plum-light); font-style: italic; color: var(--mid-brown); }
+  .reframe-table td:last-child { background: var(--teal-light); }
+  .reframe-table tr:last-child td { border-bottom: none; }
+
+  .write-cell-line {
+    border-bottom: 1.5px solid var(--blush);
+    min-height: 26px;
+    width: 100%;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  /* Identity roots visual */
+  .roots-section {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin: 20px 0;
+    border: 2px solid var(--gold-light);
+  }
+
+  .roots-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--warm-brown);
+    margin-bottom: 16px;
+    text-align: center;
+  }
+
+  .roots-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .root-box {
+    border: 1.5px solid var(--blush);
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+  }
+
+  .root-box-label {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+
+  .root-box-write {
+    border-bottom: 1.5px solid var(--blush);
+    min-height: 22px;
+    margin-bottom: 6px;
+  }
+
+  /* Reflection */
+  .reflection-section {
+    background: white;
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 20px rgba(201,151,58,0.1);
+    border: 1px solid var(--gold-light);
+  }
+
+  .prompt { margin-bottom: 28px; }
+  .prompt-number { font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 6px; }
+  .prompt > p { font-size: 15px; font-weight: 600; color: var(--warm-brown); margin-bottom: 10px; }
+  .write-lines { display: flex; flex-direction: column; gap: 10px; }
+  .write-line { border-bottom: 1.5px solid var(--blush); min-height: 28px; width: 100%; }
+
+  /* Grounding */
+  .grounding-section {
+    background: linear-gradient(135deg, var(--gold-light) 0%, var(--cream) 100%);
+    border-radius: 20px;
+    padding: 32px;
+    margin-bottom: 40px;
+    border: 1px solid #E5D4A8;
+  }
+
+  .exercise-steps { counter-reset: steps; list-style: none; margin-top: 16px; }
+  .exercise-steps li { counter-increment: steps; display: flex; gap: 14px; margin-bottom: 16px; align-items: flex-start; }
+  .exercise-steps li::before {
+    content: counter(steps);
+    min-width: 30px; height: 30px;
+    background: var(--gold);
+    color: white;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 13px; flex-shrink: 0; margin-top: 2px;
+  }
+  .exercise-steps li p { margin: 0; font-size: 14px; line-height: 1.65; }
+
+  /* Self-compassion letter area */
+  .letter-area {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1.5px dashed var(--gold);
+    margin-top: 16px;
+  }
+
+  .letter-prompt {
+    font-size: 13px;
+    color: var(--mid-brown);
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+
+  .letter-line {
+    border-bottom: 1.5px solid var(--blush);
+    min-height: 28px;
+    margin-bottom: 6px;
+  }
+
+  /* Affirmations carousel */
+  .affirmations-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+  }
+
+  .affirmation-card {
+    background: var(--warm-brown);
+    color: var(--blush);
+    border-radius: 14px;
+    padding: 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-style: italic;
+    line-height: 1.5;
+    position: relative;
+  }
+
+  .affirmation-card::before {
+    content: '\201C';
+    font-size: 40px;
+    color: rgba(232,197,176,0.2);
+    position: absolute;
+    top: 4px;
+    left: 10px;
+    line-height: 1;
+    font-style: normal;
+  }
+
+  .closing {
+    text-align: center;
+    padding: 36px 32px;
+    background: linear-gradient(135deg, var(--warm-brown) 0%, #1E1008 100%);
+    border-radius: 20px;
+    color: white;
+    margin-top: 16px;
+  }
+  .closing .affirmation-text { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-style: italic; line-height: 1.5; color: var(--blush); margin-bottom: 12px; }
+  .closing .affirmation-sub { font-size: 14px; color: rgba(255,255,255,0.55); margin-bottom: 12px; line-height: 1.6; }
+  .closing .credit { font-size: 12px; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; }
+
+  .footer { margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--blush); display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: var(--mid-brown); }
+  .footer .brand-footer { font-family: 'Cormorant Garamond', serif; font-size: 13px; color: var(--teal); }
+
+  .sources { font-size: 11px; color: var(--mid-brown); margin-top: 30px; padding: 16px; background: white; border-radius: 10px; border: 1px solid var(--blush); }
+  .sources p { margin-bottom: 4px; font-size: 11px; color: var(--mid-brown); }
+
+  @media print { body { background: white; } .page { padding: 24px; } }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <div class="brand">
+      Cheerful Heart Mental Health Counseling PLLC<br>
+      <span style="color:var(--mid-brown); font-size:11px;">Trauma-Informed | Faith-Integrated | Culturally Responsive</span>
+    </div>
+    <div class="series-tag">Series 4 of 4</div>
+  </div>
+
+  <div class="accent-bar">
+    <span class="a1"></span>
+    <span class="a2"></span>
+    <span class="a3"></span>
+  </div>
+
+  <div class="title-block">
+    <div class="worksheet-number">Worksheet 04 &middot; Identity, Worth &amp; Reclamation</div>
+    <h1>Reclaiming<br><em>Who You Are</em></h1>
+    <p class="subtitle">Exploring how sexual assault disrupts your sense of self — and beginning the slow, real, deeply personal work of coming home to yourself again.</p>
+  </div>
+
+  <div class="affirmation-box">
+    <p>What happened to you changed things. But it did not change what you are made of. The parts of you that are curious, that laugh, that love, that believe in something greater than this moment — those are still here. Still yours. This work is about finding your way back to them.</p>
+  </div>
+
+  <!-- Psychoeducation -->
+  <div class="section">
+    <div class="section-label teal">📚 Let's Learn</div>
+    <h2>How Trauma Disrupts Identity</h2>
+
+    <p>Sexual assault does not just violate a body. It can fracture a person's sense of who they are, who they can trust, and whether they are fundamentally safe in the world. Dr. Judith Herman described trauma as shattering "the constructed system of meaning that gives life its sense of order and coherence." In plain terms: the assault didn't just hurt you in the moment. It may have upended the story you were telling yourself about yourself — and the world.</p>
+
+    <p>This is especially true for Black women, who often carry the weight of cultural narratives about strength, composure, and self-sufficiency alongside the internal reality of deep wounds. When your community, your faith tradition, or even your own internal voice says <em>you should be stronger than this</em>, the gap between who you think you "should" be and how you actually feel can become its own source of pain.</p>
+
+    <h3>Shame vs. Guilt: A Critical Distinction</h3>
+    <p>One of the most damaging things sexual assault does is plant shame. Not guilt — shame. The difference is not semantic. It is clinical, and it matters enormously for healing.</p>
+
+    <div class="shame-guilt-grid">
+      <div class="sg-header sg-shame-header">Shame says...</div>
+      <div class="sg-header sg-guilt-header">Guilt says...</div>
+      <div class="sg-item shame-item">"I am bad."</div>
+      <div class="sg-item guilt-item">"I did something bad."</div>
+      <div class="sg-item shame-item">"Something is fundamentally wrong with me."</div>
+      <div class="sg-item guilt-item">"I feel bad about something that happened."</div>
+      <div class="sg-item shame-item">"I deserved it."</div>
+      <div class="sg-item guilt-item">"I wish things had been different."</div>
+      <div class="sg-item shame-item">Turns inward and hides.</div>
+      <div class="sg-item guilt-item">Can move toward repair and healing.</div>
+      <div class="sg-item shame-item">Attacks the self.</div>
+      <div class="sg-item guilt-item">Addresses the behavior or situation.</div>
+    </div>
+
+    <div class="insight-box teal">
+      <p><strong>The truth about shame after assault:</strong> Shame belongs to the person who chose to assault you — not to you. You did not cause it. You did not invite it. You did not deserve it. And yet the brain, searching for a way to make sense of what happened, often turns shame inward because that feels more controllable than sitting with the reality that someone else chose to harm you. Recognizing that your shame is misplaced is not the same as instantly releasing it. But naming it is the beginning.</p>
+    </div>
+
+    <h3>The Superwoman Burden</h3>
+    <p>Dr. Cheryl Woods-Giscombé's research on the Superwoman Schema describes how many Black women internalize a set of impossible standards: never show weakness, never ask for help, always put others first, and appear strong even when falling apart inside. Sexual assault does not care about those expectations. The gap between what you're "supposed" to feel and what you actually feel — the shame of vulnerability in a context where vulnerability was violently used against you — is its own distinct wound.</p>
+
+    <div class="insight-box plum">
+      <p><strong>Healing permission slip:</strong> You are allowed to need help. You are allowed to not be okay. You are allowed to cry, to fall apart, to be a mess, to go slowly. The strength that matters most right now is not the kind that performs composure. It's the kind that shows up for therapy, does this worksheet, and keeps choosing — even on hard days — to come back to yourself.</p>
+    </div>
+
+    <h3>Betrayal Trauma and Trust</h3>
+    <p>When sexual assault is committed by someone known — a partner, a family member, a mentor, a colleague — it produces what researcher Dr. Jennifer Freyd called <em>betrayal trauma</em>. The violation isn't only of your body; it is of your trust, your sense of safety in relationship, and sometimes your entire social world. Betrayal trauma carries unique challenges: you may feel unable to trust your own perception of people, doubt your judgment, or feel profoundly alone in a way that goes beyond the assault itself.</p>
+
+    <div class="insight-box terra">
+      <p><strong>Your judgment is not broken.</strong> It was manipulated by someone who knew how to exploit trust. That is a reflection of their character, not yours. The fact that you trusted a person who harmed you does not make you naive — it makes you someone who was deceived. Those are not the same thing.</p>
+    </div>
+
+    <h3>Your Roots: What the Trauma Cannot Take</h3>
+    <p>No matter what the assault disrupted, there are parts of you that preceded it and that persist through it. Your values. The things that make you laugh. What moves you. Who you show up for. What you believe in. These are your roots — and they are worth recovering and naming.</p>
+
+    <div class="roots-section">
+      <div class="roots-title">What I Know To Be True About Myself</div>
+      <div class="roots-grid">
+        <div class="root-box">
+          <div class="root-box-label">I care about</div>
+          <div class="root-box-write"></div>
+          <div class="root-box-write"></div>
+        </div>
+        <div class="root-box">
+          <div class="root-box-label">I am good at</div>
+          <div class="root-box-write"></div>
+          <div class="root-box-write"></div>
+        </div>
+        <div class="root-box">
+          <div class="root-box-label">I believe in</div>
+          <div class="root-box-write"></div>
+          <div class="root-box-write"></div>
+        </div>
+        <div class="root-box">
+          <div class="root-box-label">I love</div>
+          <div class="root-box-write"></div>
+          <div class="root-box-write"></div>
+        </div>
+        <div class="root-box">
+          <div class="root-box-label">I am still</div>
+          <div class="root-box-write"></div>
+          <div class="root-box-write"></div>
+        </div>
+        <div class="root-box">
+          <div class="root-box-label">People who know me say</div>
+          <div class="root-box-write"></div>
+          <div class="root-box-write"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Reflection -->
+  <div class="reflection-section">
+    <div class="section-label plum">✍🏾 Reflect</div>
+    <h2>Rewriting the Narrative</h2>
+    <p style="color:var(--mid-brown); margin-bottom:24px;">Trauma creates a story. Healing asks you to examine that story — not to erase what happened, but to see it more fully and more truthfully.</p>
+
+    <div class="prompt">
+      <div class="prompt-number">Prompt 01</div>
+      <p>What has the assault led you to believe about yourself? List the messages — even the ones that feel ugly or painful to write. You don't have to believe them to write them. Getting them out of your head and onto paper is part of the work.</p>
+      <div class="write-lines">
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+      </div>
+    </div>
+
+    <div class="prompt">
+      <div class="prompt-number">Prompt 02 — Narrative Reframe</div>
+      <p>For each painful belief you wrote above, try writing a more truthful counter-statement — not toxic positivity, not a forced affirmation, but a statement grounded in reality. (Example: Shame narrative: "I should have stopped it." Truthful counter: "I responded the way my nervous system was built to respond under threat.")</p>
+
+      <table class="reframe-table">
+        <thead>
+          <tr>
+            <th>What trauma told me</th>
+            <th>What is actually true</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td>
+            <td><div class="write-cell-line"></div></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><div class="write-cell-line"></div></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><div class="write-cell-line"></div></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><div class="write-cell-line"></div></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="prompt">
+      <div class="prompt-number">Prompt 03</div>
+      <p>Who are you outside of what happened to you? Not who you wish you were, or who you used to be — but who you are, right now, beneath the pain. What are two or three things you know are still true about you?</p>
+      <div class="write-lines">
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+      </div>
+    </div>
+
+    <div class="prompt" style="margin-bottom:0;">
+      <div class="prompt-number">Prompt 04</div>
+      <p>If a younger version of you — before all of this — could see you right now, doing this work, showing up for yourself in the middle of pain: what do you think she would say?</p>
+      <div class="write-lines">
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+        <div class="write-line"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Grounding -->
+  <div class="grounding-section">
+    <div class="section-label terra">🌿 Ground Yourself</div>
+    <h2>A Letter to Yourself</h2>
+    <p>Self-compassion research by Dr. Kristin Neff demonstrates that treating yourself with the same warmth you would offer a close friend who was suffering is one of the most evidence-based practices for healing shame and rebuilding self-worth. This exercise asks you to try that — not perfectly, but honestly.</p>
+
+    <ol class="exercise-steps">
+      <li><p><strong>Think of someone you love.</strong> A friend, a sibling, a younger family member — someone you would fiercely defend and gently comfort if they came to you in pain.</p></li>
+      <li><p><strong>Imagine they went through what you went through.</strong> Hold that in your mind. What would you say to them? What would they need to hear from you?</p></li>
+      <li><p><strong>Now write that letter to yourself.</strong> Use the space below. Begin with: "Dear ___," and write what you would say to her — to yourself. You can write about what happened, about how hard it's been, about what you wish she knew. Let it be imperfect. Let it be real.</p></li>
+    </ol>
+
+    <div class="letter-area">
+      <div class="letter-prompt">Dear ___,</div>
+      <div class="letter-line"></div>
+      <div class="letter-line"></div>
+      <div class="letter-line"></div>
+      <div class="letter-line"></div>
+      <div class="letter-line"></div>
+      <div class="letter-line"></div>
+      <div class="letter-line"></div>
+      <div class="letter-line"></div>
+      <div style="margin-top: 16px; font-size: 13px; color: var(--mid-brown); font-style: italic;">With love, _____</div>
+    </div>
+
+    <div class="insight-box sage" style="margin-top:20px; margin-bottom:0;">
+      <p><strong>A word about faith:</strong> If you have a spiritual practice, this is a moment to bring it in. Many survivors find it meaningful to incorporate prayer, sacred text, or a sense of divine presence into self-compassion work — as a reminder that their worth is not contingent on what was done to them, but on who they inherently are. You are allowed to let that anchor you here.</p>
+    </div>
+  </div>
+
+  <!-- Affirmations to take with you -->
+  <div class="section">
+    <div class="section-label">✨ Take These With You</div>
+    <h2>Truths Worth Returning To</h2>
+    <p style="font-size:13px; color:var(--mid-brown);">These are not empty phrases. They are starting points. Read them slowly. Circle the one that lands hardest today.</p>
+
+    <div class="affirmations-grid">
+      <div class="affirmation-card">What happened to you is not the sum of who you are.</div>
+      <div class="affirmation-card">Your worth was not given to you by other people, and it cannot be taken by them either.</div>
+      <div class="affirmation-card">Healing is not linear. There is no timeline you are failing to meet.</div>
+      <div class="affirmation-card">You survived something no one should survive alone. You are not required to carry this alone anymore.</div>
+      <div class="affirmation-card">Your body is still yours. Your story is still yours. Your future is still yours.</div>
+      <div class="affirmation-card">Softness is not weakness. Asking for help is not weakness. Feeling things is not weakness.</div>
+    </div>
+  </div>
+
+  <div class="closing">
+    <div class="affirmation-text">"You are not a survivor despite your wounds. You are a whole person — with wounds, with gifts, with grief, with beauty — and all of that belongs to you."</div>
+    <div class="affirmation-sub">Thank you for doing this work. Thank you for showing up for yourself today. That took something.</div>
+    <div class="credit">Cheerful Heart Mental Health Counseling PLLC &nbsp;|&nbsp; For therapeutic use with individual clients &nbsp;|&nbsp; Worksheet 4 of 4</div>
+  </div>
+
+  <div class="sources">
+    <p style="font-weight:700; color:var(--warm-brown); margin-bottom:8px;">Evidence Base</p>
+    <p>Herman, J. L. (1992). <em>Trauma and recovery.</em> Basic Books.</p>
+    <p>Freyd, J. J. (1996). <em>Betrayal trauma: The logic of forgetting childhood abuse.</em> Harvard University Press.</p>
+    <p>Neff, K. D. (2011). <em>Self-compassion: The proven power of being kind to yourself.</em> William Morrow.</p>
+    <p>Brown, B. (2010). The gifts of imperfection. Hazelden Publishing. [Shame vs. guilt framework]</p>
+    <p>Woods-Giscombé, C. L. (2010). Superwoman Schema: African American women's views on stress, strength, and health. <em>Qualitative Health Research, 20</em>(5), 668–683.</p>
+    <p>Crenshaw, K. (1991). Mapping the margins: Intersectionality, identity politics, and violence against women of color. <em>Stanford Law Review, 43</em>(6), 1241–1299.</p>
+  </div>
+
+  <div class="footer">
+    <span class="brand-footer">Cheerful Heart Mental Health Counseling PLLC</span>
+    <span>30 Glenn St, Suite 205, White Plains, NY &nbsp;|&nbsp; End of Series</span>
+  </div>
+
+</div>
+</body>
+</html>
